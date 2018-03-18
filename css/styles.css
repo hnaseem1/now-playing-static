@@ -275,7 +275,7 @@ figure {
   bottom: 20%;
   /* left: ; */
   /* right: 0; */
-  left: 2%;
+  left: 1%;
   top: 15%;
   width: 10px;
   z-index: 100;
@@ -288,6 +288,10 @@ figure {
   padding: 0;
   list-style-type: none;
 }
+.site-nav-list {
+  width: 100%;
+}
+
 
 .site-nav-item {
   /* float: left; */
@@ -300,10 +304,13 @@ figure {
   text-transform: uppercase;
   margin-right: 40%;
   margin-bottom: 11%;
+  width: 7em;
+
 }
 
 .site-nav-item > .fa {
   font-size: 1.75rem;
+
 }
 
 .site-nav-item:hover {
