@@ -433,3 +433,268 @@ display: block;
 }
 
 }
+/*----------------------------------------------------------------------------------------  */
+/*----------------------------------------------------------------------------------------  */
+/*---------------------------BREAKOUT POINT FOR 992 PXL-----------------------------------  */
+/*----------------------------------------------------------------------------------------  */
+/*----------------------------------------------------------------------------------------  */
+/*----------------------------------------------------------------------------------------  */
+
+
+@media screen and (min-width: 992px ) {
+
+/* BASE styles */
+
+html {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  color: #333333;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  bottom: 0;
+  padding-bottom: 0;
+
+  /*
+    We need to add some padding to the bottom of the body on mobile so that
+     the footer won't get covered by our navigation
+  */
+}
+
+/*
+  This rule ensure that all images always fit in their container
+   but are never stretched beyond their native resolution
+*/
+
+
+
+/* CLEARFIX - for ensuring floated elements are contained in their parent */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+main {
+  margin-left: 6em;
+}
+
+/* NAVIGATION styles */
+.site-logo {
+  position: fixed;
+  top: 1rem;
+  left: 0.3rem;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  z-index: 100;
+}
+
+.site-nav {
+  position: fixed;
+  bottom: 20%;
+  /* left: ; */
+  /* right: 0; */
+  left: 0%;
+  top: 15%;
+  width: 10px;
+  z-index: 100;
+  background-color: #ffffff;
+}
+
+.site-nav-list,
+.footer-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.site-nav-list {
+  width: 100%;
+}
+
+
+.site-nav-item {
+  /* float: left; */
+  max-width: 96px;
+  height: 60px;
+  /* padding: 0.75em; */
+  font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 40%;
+  margin-bottom: 11%;
+  width: 10em;
+
+}
+
+.site-nav-item > .fa {
+  font-size: 1.75rem;
+
+}
+
+.site-nav-item:hover {
+  background-color: #333333;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.site-nav-item-label {
+  display: block;
+  margin-top: 0.5em;
+}
+
+
+/* MOVIE styles */
+.movie {
+  position: relative;
+  /* margin-left: 0px; */
+  width: 33.1%;
+  display: inline-block;
+  /* margin-right: 0; */
+  margin: 0;
+  padding: 0;
+}
+
+.movie:first-child {
+  position: relative;
+  margin-left: 0px;
+  width: 100%;
+}
+
+
+
+.movie-poster,
+.movie-backdrop {
+  display: block;
+}
+
+p.movie-overview {
+  display: none;
+}
+
+p.movie-overview:first-child {
+  display: block;
+}
+
+/*
+  Hide the poster on mobile devices, only show backdrop
+  TIP: Use media queries to reveal it on larger devices
+*/
+.movie-poster {
+  display: none;
+}
+
+.movie-details {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0;
+  width: 100%;
+  padding: 1em;
+  color: #ffffff;
+
+
+  /*
+    Linear gradients are a bit of an advanced CSS3 feature.
+      As seen below you specify the linear-gradient as a value for
+      the `background-image` property. It creates a gradient with as many stops
+      as you care to define. To learn more about how it works, read this article
+      and the related docs: https://medium.com/@patrickbrosset/do-you-really-understand-css-linear-gradients-631d9a895caf#.6yl8vdmiv
+  */
+
+  background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+/* movie-image: first child {
+  max-width: 100%;
+}
+
+figure: first child {
+  /* float: right; */
+  /* margin-left: 2em; */
+  /* padding: 0; */
+} */
+
+
+/*
+  Hide the overview on mobile devices
+  TIP: Use media queries to reveal it on larger devices
+*/
+.movie-overview {
+  font-size: 0.8em;
+  display: none;
+  width: 88%;
+}
+
+
+.movie-title-label {
+  font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.7em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: gold;
+  margin: 0;
+}
+
+.movie-title {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.1;
+}
+
+
+/* FOOTER styles */
+.footer {
+
+}
+.site-footer {
+  /* position: absolute; */
+  text-align: center;
+  bottom: 0;
+  z-index: 112;
+  width: 100%;
+}
+
+.footer-nav {
+  padding: 1em;
+}
+
+.footer-nav-item {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+/*
+  The :last-child pseudo-selector lets you select only the last element
+    within a containing element. Similarly, there's a :first-child pseudo-selector
+    to select the first child of a containing element.
+*/
+.footer-nav-item:last-child {
+  margin-right: 0;
+}
+
+
+.about {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 1em;
+}
+
+.about > p {
+  margin: 0;
+}
+
+}
